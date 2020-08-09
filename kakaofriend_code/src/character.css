@@ -1,0 +1,179 @@
+.character-title-wrap {
+    width: 100%;
+    background: url("/img/characterimg/kakao.png") no-repeat;
+    background-position: top center;
+    height: 785px;
+}
+
+.character-title {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    white-space: nowrap;
+}
+
+.character-title > h1 {
+    font-size: 4rem;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    letter-spacing: 0.4rem;
+}
+
+.character-title > p {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    display: inline-block;
+}    
+
+.character-title > span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.lang-list > ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+.lang-list > ul > li {
+    font-size: 1.7rem;
+    padding: 30px;
+    white-space: nowrap;
+}
+
+.lang-list > ul > li > a {
+    font-weight: bold;
+}
+
+.lang-list > ul > li > a:hover {
+    color: #999;
+}
+
+.lang-list-choice {
+    color: #999;
+}
+
+.character-box-wrap {
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.character-info {
+    display: grid;
+    grid-template-areas: ". .";
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    padding: 150px 50px 0 50px;
+    position: relative;
+    height: 580px;
+}
+
+
+.character-img {
+	width: 400px;
+    height: 380px;
+}
+
+.ryan {
+    background: url("/img/characterimg/ryan.png") no-repeat;
+}
+
+.apeach {
+	background: url("/img/characterimg/apeach.png") no-repeat;
+}
+
+.muzicon {
+	background: url("/img/characterimg/muzicon.png") no-repeat;
+}
+
+.frodoneo {
+	background: url("/img/characterimg/frodoneo.png") no-repeat;
+	margin-right: 50px;
+}
+
+.tube {
+	background: url("/img/characterimg/tube.png") no-repeat;
+}
+
+.jayg {
+	background: url("/img/characterimg/jayg.png") no-repeat;
+}
+
+.character-text {
+    width: 400px;
+    height: 356px;
+    right: 500px;
+    padding: 50px 0 100px 0;
+}
+
+.character-text > p {
+    margin: 10px 0;
+}
+
+.character-text > p:nth-of-type(1) {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3rem;
+}
+
+.character-text > p:nth-of-type(2) {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.character-text > p:nth-of-type(3) {
+    font-size: 1.5rem;
+    line-height: 30px;
+    font-weight: bold;
+    color: #999;
+    margin: 30px 0 0 0;
+}
+
+.go-page {
+    position: absolute;
+    display: block;
+    right: 200px;
+    bottom: 30px;
+    padding: 10px 0;
+}
+
+.go-page > a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.go-page > a:hover {
+    color: #999;
+}
+
+.banner-wrap {
+	width: 90%;
+	margin: 50px auto;
+	text-align: center;
+}
+
+.banner-wrap > a > img {
+	width: 100%;
+	max-width: 1086px;
+}
+
+.banner-wrap > a > img:nth-of-type(2) {
+	display: none;
+}
+
+@media screen and (max-width: 1440px) {
+	.go-page {
+		right: 130px;
+	}
+}
+
+@media screen and (max-width: 1183px) {
+	.go-page {
+		right: 0;
+	}
+}
+

@@ -1,4 +1,15 @@
 $(function(){
+	/****************************
+	 *** IE 접속 불가 코드
+	 ****************************/ 
+	var agent = navigator.userAgent.toLowerCase();
+	if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+	 location.href = "/noie.html";
+	}
+	else {
+	  console.log("it's not IE");
+	}
+	
 	//저해상도시 햄버거메뉴 모양변경
 	var  $hamburgerMenu = $(".hamburger-menu");
 	$(".hamburger-menu-wrap").on("click",function(){

@@ -26,31 +26,29 @@ $(function(){
 	});
 	
 	//국가별 클릭시 매장 리스트 변경
-	$(".shop-list-wrap > ul > li > a").on("click",shopListChange);
-	
-	function shopListChange() {
-		
+	$(".shop-list-wrap > ul > li > a").on("click",function(){
 		switch($(this).attr("id")) {
 			case "all-shop" : 
 				$(".shop-list").children().css("display","block");
 				$(".area-combo").css("display","none");
 				break;
-			case "korea-shop" : 
+			case "korea-shop" :
+				$(".korean").css("display","block");
+				$(".area-combo").css("display","block"); 
 				$(".shop").not(".korean").css("display","none");
-				$(".area-combo").css("display","block");
-				if($(".korean").css("display","none")) {
-					$(".korean").css("display","block")
-				}
 				break;
 			case "japan-shop" :
+				$(".japan").css("display","block");
 				$(".shop").not(".japan").css("display","none");
 				$(".area-combo").css("display","none");
-				if($(".japan").css("display","none")) {
-					$(".japan").css("display","block")
-				}
 				break;		
 		}
-	}
+		$(".area-combo > div").text($(".area-combo > ul > li:first-child").text());
+		$(".area-combo > ul > li:first-child").addClass("combolist-choice");
+		$(".area-combo > ul > li").not($(".area-combo > ul > li:first-child")).removeClass("combolist-choice");
+	});
+	
+	
 	
 	// 도큐먼트 클릭시 콤보박스 제거
 	$(".area-combo > ul").on("mousedown",function(e){
@@ -81,46 +79,32 @@ $(function(){
 				$(".shop-list").children().css("display","block");
 				break;
 			case "seoul" :
+				$(".seoul").css("display","block");
 				$(".shop-list > div").not(".seoul").css("display","none");
-				if($(".seoul").css("display","none")){
-					$(".seoul").css("display","block");
-				}
 				break;
 			case "gyeonggi" :
+				$(".gyeonggi").css("display","block");
 				$(".shop-list > div").not(".gyeonggi").css("display","none");
-				if($(".gyeonggi").css("display","none")){
-					$(".gyeonggi").css("display","block");
-				}
 				break
 			case "incheon" :
+				$(".incheon").css("display","block");
 				$(".shop-list > div").not(".incheon").css("display","none");
-				if($(".incheon").css("display","none")){
-					$(".incheon").css("display","block");
-				}
 				break;
 			case "daegu" :
+				$(".daegu").css("display","block");
 				$(".shop-list > div").not(".daegu").css("display","none");
-				if($(".daegu").css("display","none")){
-					$(".daegu").css("display","block");
-				}
 				break;
 			case "daejeon" :
+				$(".daejeon").css("display","block");
 				$(".shop-list > div").not(".daejeon").css("display","none");
-				if($(".daejeon").css("display","none")){
-					$(".daejeon").css("display","block");
-				}
 				break;
 			case "busan" :
+				$(".busan").css("display","block");
 				$(".shop-list > div").not(".busan").css("display","none");
-				if($(".busan").css("display","none")){
-					$(".busan").css("display","block");
-				}
 				break;
 			case "jeju" :
+				$(".jeju").css("display","block");
 				$(".shop-list > div").not(".jeju").css("display","none");
-				if($(".jeju").css("display","none")){
-					$(".jeju").css("display","block");
-				}
 				break;	
 		}
 	}
